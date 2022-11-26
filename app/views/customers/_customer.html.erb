@@ -1,6 +1,24 @@
-<div class="column">
-  <h1 class="title"></h1>
-  <% if customer.image.present? %>
-    <%= image_tag customer.image %>
-  <% end %>
+<div class="column is-one-third">
+<div class="card">
+  <div class="card-content">
+    <div class="media">
+      <div class="media-left">
+      <% if customer.image.present? %>
+        <figure class="image is-128x128">
+          <%= image_tag customer.image %>
+        </figure>
+      <% end %>
+      </div>
+      <div class="media-content">
+        <p class="title is-4"><%= customer.full_name %></p>
+        <p class="subtitle is-6"><%= customer.phone %></p>
+        <p class="subtitle is-6"><%= customer.email %></p>
+      </div>
+    </div>
+
+    <div class="content">
+      <%= customer.notes %>
+    </div>
+  </div>
+</div>
 </div>
