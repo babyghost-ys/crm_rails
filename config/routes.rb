@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  root "customers#index"
   resources :customers do
     collection do
       get :alphabetized
